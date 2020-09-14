@@ -9,8 +9,9 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import java.io.Serializable
-
+@Keep
 class MultilanguageString : Serializable {
 
     var singleString: String? = null

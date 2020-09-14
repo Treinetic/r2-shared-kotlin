@@ -9,9 +9,10 @@
 
 package org.readium.r2.shared.drm
 
+import androidx.annotation.Keep
 import java.io.Serializable
 
-
+@Keep
 class Drm(var brand: Brand) : Serializable {
 
     var scheme: Scheme

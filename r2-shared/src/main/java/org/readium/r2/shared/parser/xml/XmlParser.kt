@@ -10,9 +10,11 @@
 package org.readium.r2.shared.parser.xml
 
 import android.util.Xml
+import androidx.annotation.Keep
 import org.xmlpull.v1.XmlPullParser
 import java.io.InputStream
 
+@Keep
 class XmlParser {
 
     private var nodes: MutableList<Node> = mutableListOf()

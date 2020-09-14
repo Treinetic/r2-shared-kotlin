@@ -9,7 +9,8 @@
 
 package org.readium.r2.shared.opds
 
+import androidx.annotation.Keep
 import java.io.Serializable
 
-
+@Keep
 data class Price(var currency: String, var value: Double) : Serializable

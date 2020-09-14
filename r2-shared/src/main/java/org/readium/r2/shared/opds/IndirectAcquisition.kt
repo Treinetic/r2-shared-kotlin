@@ -9,16 +9,17 @@
 
 package org.readium.r2.shared.opds
 
+import androidx.annotation.Keep
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.Serializable
 
-
+@Keep
 data class IndirectAcquisition(var typeAcquisition: String) : Serializable {
     var child = mutableListOf<IndirectAcquisition>()
 
 }
-
+@Keep
 enum class IndirectAcquisitionError(v: String) {
     InvalidJSON("OPDS 2 manifest is not valid JSON"),
     MetadataNotFound("Metadata not found"),

@@ -9,6 +9,9 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
+
+@Keep
 class RootFile() {
 
     constructor(rootPath: String = "", rootFilePath: String = "", mimetype: String = "", version: Double? = null) : this() {

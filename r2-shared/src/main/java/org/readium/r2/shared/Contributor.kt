@@ -9,10 +9,12 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.Serializable
 
+@Keep
 class Contributor : JSONable, Serializable {
 
     var multilanguageName: MultilanguageString = MultilanguageString()

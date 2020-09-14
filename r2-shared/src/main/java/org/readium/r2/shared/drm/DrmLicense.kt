@@ -9,11 +9,13 @@
 
 package org.readium.r2.shared.drm
 
+import androidx.annotation.Keep
 import org.joda.time.DateTime
 import java.io.Serializable
 import java.net.URL
 import java.util.*
 
+@Keep
 interface DrmLicense : Serializable {
     fun decipher(data: ByteArray): ByteArray?
     fun areRightsValid()

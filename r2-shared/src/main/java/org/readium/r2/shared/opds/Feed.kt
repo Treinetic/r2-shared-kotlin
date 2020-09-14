@@ -9,12 +9,13 @@
 
 package org.readium.r2.shared.opds
 
+import androidx.annotation.Keep
 import org.readium.r2.shared.Link
 import org.readium.r2.shared.Publication
 import java.io.Serializable
 import java.net.URL
 
-
+@Keep
 data class Feed(val title: String, val type: Int, val href: URL) : Serializable {
     var metadata: OpdsMetadata = OpdsMetadata(title = title)
     var links: MutableList<Link> = mutableListOf()
@@ -30,4 +31,5 @@ data class Feed(val title: String, val type: Int, val href: URL) : Serializable 
     }
 }
 
+@Keep
 data class ParseData(val feed: Feed?, val publication: Publication?, val type: Int) : Serializable

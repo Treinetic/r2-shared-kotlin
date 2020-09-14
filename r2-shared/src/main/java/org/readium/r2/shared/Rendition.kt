@@ -9,15 +9,18 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONObject
 import java.io.Serializable
 
+@Keep
 enum class RenditionLayout(val value: String) : Serializable {
     Reflowable("reflowable"),
     Fixed("pre-paginated");
     companion object : Publication.EnumCompanion<String, RenditionLayout>(RenditionLayout.values().associateBy(RenditionLayout::value))
 }
 
+@Keep
 enum class RenditionFlow(val value: String) : Serializable {
     Paginated("paginated"),
     Continuous("continuous"),
@@ -26,6 +29,7 @@ enum class RenditionFlow(val value: String) : Serializable {
     companion object : Publication.EnumCompanion<String, RenditionFlow>(RenditionFlow.values().associateBy(RenditionFlow::value))
 }
 
+@Keep
 enum class RenditionOrientation(val value: String) : Serializable {
     Auto("auto"),
     Landscape("landscape"),
@@ -33,6 +37,7 @@ enum class RenditionOrientation(val value: String) : Serializable {
     companion object : Publication.EnumCompanion<String, RenditionOrientation>(RenditionOrientation.values().associateBy(RenditionOrientation::value))
 }
 
+@Keep
 enum class RenditionSpread(val value: String) : Serializable {
     Auto("auto"),
     Landscape("landscape"),
@@ -42,6 +47,7 @@ enum class RenditionSpread(val value: String) : Serializable {
     companion object : Publication.EnumCompanion<String, RenditionSpread>(RenditionSpread.values().associateBy(RenditionSpread::value))
 }
 
+@Keep
 class Rendition : Serializable {
     var flow: RenditionFlow? = null
     var spread: RenditionSpread? = null

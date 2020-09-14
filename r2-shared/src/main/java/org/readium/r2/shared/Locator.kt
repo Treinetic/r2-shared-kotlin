@@ -9,6 +9,7 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONObject
 import java.io.Serializable
 
@@ -21,7 +22,7 @@ import java.io.Serializable
  * @val location: Location - One or more alternative expressions of the location.
  * @val text: LocatorText? - Textual context of the locator.
  */
-
+@Keep
 open class Locator(val href: String,
                    val created: Long,
                    val title: String,
@@ -95,6 +96,7 @@ class LocatorText(var after: String? = null,
  * @var position: Long - Index of a segment in the resource / synthetic page number!!??
  *
  */
+@Keep
 class Locations(var cfi: String? = null,             // 1 = highlight, annotation etc
                 var id: String? = null,              // 2 = fragment identifier (toc, page lists, landmarks)
                 var cssSelector: String? = null,     // 2 =

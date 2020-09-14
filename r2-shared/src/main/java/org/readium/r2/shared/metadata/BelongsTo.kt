@@ -9,10 +9,12 @@
 
 package org.readium.r2.shared.metadata
 
+import androidx.annotation.Keep
 import org.readium.r2.shared.Collection
 import java.io.Serializable
 
 
+@Keep
 class BelongsTo: Serializable {
 
     var series: MutableList<Collection> = mutableListOf()

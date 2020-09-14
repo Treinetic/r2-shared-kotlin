@@ -9,6 +9,7 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONArray
 import org.json.JSONObject
 import org.readium.r2.shared.opds.Price
@@ -17,6 +18,7 @@ import java.io.Serializable
 import java.net.URL
 
 //  A link to a resource
+@Keep
 class Link : JSONable, Serializable {
     //  The link destination
     var href: String? = null
@@ -67,7 +69,7 @@ class Link : JSONable, Serializable {
     }
 
 }
-
+@Keep
 enum class LinkError(var v: String) {
     InvalidLink("Invalid link"),
 }

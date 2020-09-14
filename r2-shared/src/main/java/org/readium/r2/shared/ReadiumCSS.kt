@@ -1,5 +1,6 @@
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 
 
 const val FONT_SIZE_REF = "fontSize"
@@ -32,6 +33,7 @@ const val LINE_HEIGHT_NAME = "--USER__$LINE_HEIGHT_REF"
 
 // List of strings that can identify the name of a CSS custom property
 // Also used for storing UserSettings in UserDefaults
+@Keep
 enum class ReadiumCSSName(val ref: String) {
     fontSize("--USER__fontSize"),
     fontFamily("--USER__fontFamily"),

@@ -9,6 +9,9 @@
 
 package org.readium.r2.shared.parser.xml
 
+import androidx.annotation.Keep
+
+@Keep
 class Node(val name: String) {
 
     var children: MutableList<Node> = mutableListOf()

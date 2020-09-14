@@ -9,8 +9,10 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import java.net.URL
 
+@Keep
 class Clip {
     var relativeUrl: URL? = null
     var fragmentId: String? = null
@@ -19,6 +21,7 @@ class Clip {
     var duration: Double? = null
 }
 
+@Keep
 class MediaOverlayNode(var text: String? = null, private var audio: String? = null) {
 
     var role: MutableList<String> = mutableListOf()

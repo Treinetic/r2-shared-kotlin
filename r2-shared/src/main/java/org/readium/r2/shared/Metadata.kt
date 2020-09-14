@@ -9,6 +9,7 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.joda.time.DateTime
 import org.json.JSONArray
 import org.json.JSONObject
@@ -16,6 +17,7 @@ import org.readium.r2.shared.metadata.BelongsTo
 import java.io.Serializable
 import java.util.*
 
+@Keep
 class Metadata : Serializable {
     /// The structure used for the serialisation.
     var multilanguageTitle: MultilanguageString? = null
@@ -273,18 +275,18 @@ fun parseMetadata(metadataDict: JSONObject): Metadata {
 
     return m
 }
-
+@Keep
 enum class LangType {
     cjk, afh, other
 }
 
-
+@Keep
 enum class PageProgressionDirection {
     default,
     ltr,
     rtl
 }
-
+@Keep
 enum class ContentLayoutStyle {
     ltr,
     rtl,

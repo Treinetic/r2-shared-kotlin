@@ -9,8 +9,10 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONObject
 
+@Keep
 data class Collection(var name: String) {
     var sortAs: String? = null
     var identifier: String? = null
@@ -19,6 +21,7 @@ data class Collection(var name: String) {
 
 }
 
+@Keep
 enum class CollectionError(val v: String) {
     InvalidCollection("Invalid collection")
 }

@@ -9,6 +9,9 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
+
+@Keep
 class MediaOverlays(private var nodes: MutableList<MediaOverlayNode> = mutableListOf()) {
 
     fun clip(id: String): Clip {

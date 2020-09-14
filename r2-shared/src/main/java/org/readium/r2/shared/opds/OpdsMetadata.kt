@@ -9,10 +9,11 @@
 
 package org.readium.r2.shared.opds
 
+import androidx.annotation.Keep
 import java.io.Serializable
 import java.util.*
 
-
+@Keep
 data class OpdsMetadata(var title: String) : Serializable {
     var numberOfItems: Int? = null
     var itemsPerPage: Int? = null

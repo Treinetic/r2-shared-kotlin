@@ -9,10 +9,12 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.readium.r2.shared.drm.Drm
 import java.io.Serializable
 
 //  Contains metadata parsed from Encryption.xml
+@Keep
 class Encryption : Serializable {
     //  Identifies the algorithm used to encrypt the resource
     var algorithm: String? = null

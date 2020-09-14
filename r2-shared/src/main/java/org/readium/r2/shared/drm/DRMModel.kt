@@ -9,7 +9,9 @@
 
 package org.readium.r2.shared.drm
 
+import androidx.annotation.Keep
 import java.io.Serializable
 import java.net.URL
 
+@Keep
 data class DRMModel(val type: String, val licensePath: URL) : Serializable

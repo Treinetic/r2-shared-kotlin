@@ -9,8 +9,10 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import java.io.Serializable
 
+@Keep
 sealed class UserProperty(var ref: String, var name: String) {
 
     private var value: String = ""
@@ -26,10 +28,12 @@ sealed class UserProperty(var ref: String, var name: String) {
 
 // TODO add here your new Subclasses of UserPreference. It has to be an abstract class inheriting from UserSetting.
 
+@Keep
 class Enumerable(var index: Int, private val values: List<String>, ref: String, name: String) : UserProperty(ref, name) {
     override fun toString() = values[index]
 }
 
+@Keep
 class Incremental(var value: Float,
                   val min: Float,
                   val max: Float,
@@ -49,6 +53,7 @@ class Incremental(var value: Float,
     override fun toString() = value.toString() + suffix
 }
 
+@Keep
 class Switchable(onValue: String, offValue: String, var on: Boolean, ref: String, name: String) : UserProperty(ref, name) {
 
     private val values = mapOf(true to onValue, false to offValue)
@@ -61,6 +66,7 @@ class Switchable(onValue: String, offValue: String, var on: Boolean, ref: String
 }
 
 
+@Keep
 class UserProperties : Serializable {
 
     val properties: MutableList<UserProperty> = mutableListOf()

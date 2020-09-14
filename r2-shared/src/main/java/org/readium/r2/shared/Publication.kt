@@ -9,6 +9,7 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.Serializable
@@ -71,6 +72,7 @@ class TocElement(val link: Link, val children: List<TocElement>) : JSONable {
  *      class
  *
  */
+@Keep
 class Publication : Serializable {
 
     /**

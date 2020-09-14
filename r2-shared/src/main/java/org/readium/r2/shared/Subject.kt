@@ -9,9 +9,11 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONObject
 import java.io.Serializable
 
+@Keep
 class Subject : JSONable, Serializable {
 
     var name: String? = null

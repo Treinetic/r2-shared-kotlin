@@ -9,11 +9,12 @@
 
 package org.readium.r2.shared.opds
 
+import androidx.annotation.Keep
 import org.readium.r2.shared.Link
 import org.readium.r2.shared.Publication
 import java.io.Serializable
 
-
+@Keep
 data class Group(val title: String) : Serializable {
     var metadata: OpdsMetadata = OpdsMetadata(title = title)
     var links = mutableListOf<Link>()

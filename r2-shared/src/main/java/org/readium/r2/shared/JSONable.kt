@@ -9,8 +9,10 @@
 
 package org.readium.r2.shared
 
+import androidx.annotation.Keep
 import org.json.JSONObject
 
+@Keep
 interface JSONable {
 
     fun toJSON(): JSONObject
